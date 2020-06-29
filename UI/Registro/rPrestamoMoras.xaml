@@ -46,7 +46,7 @@
 
                     <StackPanel Orientation="Horizontal">
 
-                       <TextBox Name="ValorTextBox" Width="143" Height="20" Margin="5,0" Text="{Binding Detalle.Valor}" HorizontalAlignment="Left" TextChanged="ValorTextBox_TextChanged"/>
+                       
 
                         <Button Name="AgregarButton" Width="74" Height="20" Click="AgregarButton_Click">
                             <StackPanel Orientation="Horizontal">

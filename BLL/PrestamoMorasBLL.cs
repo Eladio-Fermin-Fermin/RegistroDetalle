@@ -59,8 +59,6 @@ namespace Registro_Detalle.BLL
             return ok;
         }
 
-
-
         //Metodo Modificar.
         private static bool Modificar(PrestamoMoras prestamoMoras)
         {
