@@ -22,7 +22,7 @@ namespace Registro_Detalle.UI.Registro
     {
 
         private PrestamoMoras prestamoMoras = new PrestamoMoras();
-        double total;
+        //double total;
         public rPrestamoMoras()
         {
             InitializeComponent();
@@ -137,9 +137,42 @@ namespace Registro_Detalle.UI.Registro
             }
         }
 
+        public bool Validar()
+        {
+            if (IdTextBox.Text.Length == 0 || MoraIdDetalleTextBox.Text.Length == 0 ||
+                PrestamoIdTextBox.Text.Length == 0 || ValorTextBox.Text.Length == 0 || MoraIdTextBox.Text.Length == 0)
+            {
+                MessageBox.Show("No pueden haber campos vacios.", "Campo vacio.", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
+            }
 
 
+            if (!Regex.IsMatch(IdTextBox.Text, "^[0-9]+$"))
+            {
+                MessageBox.Show("Solo se permiten caracteres numericos.", "Campo Id.", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
 
+            if (!Regex.IsMatch(MoraIdDetalleTextBox.Text, "^[0-9]+$"))
+            {
+                MessageBox.Show("Solo se permiten caracteres numericos.", "Campo MoraId.", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            if (!Regex.IsMatch(PrestamoIdTextBox.Text, "^[0-9]+$"))
+            {
+                MessageBox.Show("Solo se permiten caracteres numericos.", "Campo PrestamoId.", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            if (!Regex.IsMatch(ValorTextBox.Text, "^[0-9]+$"))
+            {
+                MessageBox.Show("Solo se permiten caracteres numericos.", "Campo Valor.", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
+            return true;
+        }
 
     }
 }

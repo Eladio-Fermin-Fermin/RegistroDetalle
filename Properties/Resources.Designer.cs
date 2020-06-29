@@ -59,5 +59,15 @@ namespace Registro_Detalle.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] Agregar1 {
+            get {
+                object obj = ResourceManager.GetObject("Agregar1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

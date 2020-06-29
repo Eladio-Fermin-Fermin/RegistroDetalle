@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Agregar1.png" />
     <None Remove="Resources\Buscar1.png" />
     <None Remove="Resources\Eliminar1.png" />
     <None Remove="Resources\Eliminar2.png" />
@@ -32,6 +33,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Agregar1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Resources\Buscar1.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

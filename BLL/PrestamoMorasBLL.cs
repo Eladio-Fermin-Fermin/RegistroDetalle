@@ -70,9 +70,9 @@ namespace Registro_Detalle.BLL
             try
             {
                 contexto.Database.ExecuteSqlRaw($"Delete FROM MorasDetalle Where MoraId={prestamoMoras.MoraId}");
-                foreach (var anterior in prestamoMoras.PrestamoMorasDetalle)
+                //foreach (var anterior in prestamoMoras.PrestamoMorasDetalle)
                 {
-                    contexto.Entry(anterior).State = EntityState.Added;
+                    //contexto.Entry(anterior).State = EntityState.Added;
                 }
                 contexto.Entry(prestamoMoras).State = EntityState.Modified;
                 ok = (contexto.SaveChanges() > 0);
@@ -112,7 +112,7 @@ namespace Registro_Detalle.BLL
 
             try
             {
-                moras = contexto.PrestamoMoras.Include(x => x.PrestamoMorasDetalle).Where(p => p.MoraId == id).SingleOrDefault();
+              //  moras = contexto.PrestamoMoras.Include(x => x.PrestamoMorasDetalle).Where(p => p.MoraId == id).SingleOrDefault();
             }
             catch (Exception)
             {

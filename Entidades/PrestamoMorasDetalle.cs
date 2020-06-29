@@ -14,7 +14,7 @@ namespace Registro_Detalle.Entidades
         public int PrestamoId { get; set; }
         public double Valor { get; set; }
 
-        public PrestamoMoras(int id, int moraId, int prestamoId, double valor)
+        public PrestamoMorasDetalle(int id, int moraId, int prestamoId, double valor)
         {
             Id = id;
             MoraId = moraId;
